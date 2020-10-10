@@ -93,3 +93,13 @@ level = level - 10
 -- fibaro:debug('off') 
 --end
   end
+--[[ FIBARO_GIT_HOOK - DO NOT CHANGE AS IT WILL BE DISCARDED 
+@sceneID=9
+@name="Lys Tak Vest"
+@roomID=7
+@autostart=false
+@runConfig=TRIGGER_AND_MANUAL
+@maxRunningInstance=2
+@type="com.fibaro.luaScene"
+@isLua=true
+--]]

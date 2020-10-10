@@ -38,3 +38,13 @@ else
   end
 
 end
+--[[ FIBARO_GIT_HOOK - DO NOT CHANGE AS IT WILL BE DISCARDED 
+@sceneID=14
+@name="Flight very early li"
+@roomID=156
+@autostart=true
+@runConfig=MANUAL_ONLY
+@maxRunningInstance=2
+@type="com.fibaro.luaScene"
+@isLua=true
+--]]
