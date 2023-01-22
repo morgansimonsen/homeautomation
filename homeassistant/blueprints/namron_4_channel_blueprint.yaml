@@ -10,7 +10,7 @@ blueprint:
       selector:
         device:
           integration: zwave_js
-          manufacturer: Namron AS
+          manufacturer: Namron
           model: 4512711
 
     button_1_pressed:
@@ -18,168 +18,168 @@ blueprint:
       description: Actions to run when button 1 is pressed.
       default: []
       selector:
-        action:
+        action: {}
 
     button_1_held:
       name: Button 1 Held Down
       description: Actions to run when button 1 is held down.
       default: []
       selector:
-        action:
+        action: {}
 
     button_2_pressed:
       name: Button 2 Pressed
       description: Actions to run when button 2 is pressed.
       default: []
       selector:
-        action:
+        action: {}
 
     button_2_held:
       name: Button 2 Held Down
       description: Actions to run when button 2 is held down.
       default: []
       selector:
-        action:
+        action: {}
 
     button_3_pressed:
       name: Button 3 Pressed
       description: Actions to run when button 3 is pressed.
       default: []
       selector:
-        action:
+        action: {}
 
     button_3_held:
       name: Button 3 Held Down
       description: Actions to run when button 3 is held down.
       default: []
       selector:
-        action:
+        action: {}
 
     button_4_pressed:
       name: Button 4 Pressed
       description: Actions to run when button 4 is pressed.
       default: []
       selector:
-        action:
+        action: {}
 
     button_4_held:
       name: Button 4 Held Down
       description: Actions to run when button 4 is held down.
       default: []
       selector:
-        action:
+        action: {}
 
     button_5_pressed:
       name: Button 5 Pressed
       description: Actions to run when button 5 is pressed.
       default: []
       selector:
-        action:
+        action: {}
 
     button_5_held:
       name: Button 5 Held Down
       description: Actions to run when button 5 is held down.
       default: []
       selector:
-        action:
+        action: {}
 
     button_6_pressed:
       name: Button 6 Pressed
       description: Actions to run when button 6 is pressed.
       default: []
       selector:
-        action:
+        action: {}
 
     button_6_held:
       name: Button 6 Held Down
       description: Actions to run when button 6 is held down.
       default: []
       selector:
-        action:
+        action: {}
 
     button_7_pressed:
       name: Button 7 Pressed
       description: Actions to run when button 7 is pressed.
       default: []
       selector:
-        action:
+        action: {}
 
     button_7_held:
       name: Button 7 Held Down
       description: Actions to run when button 7 is held down.
       default: []
       selector:
-        action:
+        action: {}
 
     button_8_pressed:
       name: Button 8 Pressed
       description: Actions to run when button 8 is pressed.
       default: []
       selector:
-        action:
+        action: {}
 
     button_8_held:
       name: Button 8 Held Down
       description: Actions to run when button 8 is held down.
       default: []
       selector:
-        action:
+        action: {}
 
     button_9_pressed:
       name: Button 9 Pressed
       description: Actions to run when button 9 is pressed.
       default: []
       selector:
-        action:
+        action: {}
 
     button_9_held:
       name: Button 9 Held Down
       description: Actions to run when button 9 is held down.
       default: []
       selector:
-        action:
+        action: {}
 
     button_10_pressed:
       name: Button 10 Pressed
       description: Actions to run when button 10 is pressed.
       default: []
       selector:
-        action:
+        action: {}
 
     button_10_held:
       name: Button 10 Held Down
       description: Actions to run when button 10 is held down.
       default: []
       selector:
-        action:
+        action: {}
 
     button_11_pressed:
       name: Button 11 Pressed
       description: Actions to run when button 11 is pressed.
       default: []
       selector:
-        action:
+        action: {}
 
     button_11_held:
       name: Button 11 Held Down
       description: Actions to run when button 11 is held down.
       default: []
       selector:
-        action:
+        action: {}
 
     button_12_pressed:
       name: Button 12 Pressed
       description: Actions to run when button 12 is pressed.
       default: []
       selector:
-        action:
+        action: {}
 
     button_12_held:
       name: Button 12 Held Down
       description: Actions to run when button 12 is held down.
       default: []
       selector:
-        action:
+        action: {}
 
 mode: single
 max_exceeded: silent
@@ -198,100 +198,98 @@ action:
       key_press_type: "{{ trigger.event.data.value }}" # KeyPressed | KeyHeldDown | KeyReleased
   - choose:
     - conditions:
-      - "{{ scene_id == 001 }}"
+      - "{{ scene_id == '001' }}"
       - "{{ key_press_type == 'KeyPressed' }}"
       sequence: !input button_1_pressed
     - conditions:
-      - "{{ scene_id == 001 }}"
+      - "{{ scene_id == '001' }}"
       - "{{ key_press_type == 'KeyHeldDown' }}"
       sequence: !input button_1_held
     - conditions:
-      - "{{ scene_id == 002 }}"
+      - "{{ scene_id == '002' }}"
       - "{{ key_press_type == 'KeyPressed' }}"
       sequence: !input button_2_pressed
     - conditions:
-      - "{{ scene_id == 002 }}"
+      - "{{ scene_id == '002' }}"
       - "{{ key_press_type == 'KeyHeldDown' }}"
       sequence: !input button_2_held
     - conditions:
-      - "{{ scene_id == 003 }}"
+      - "{{ scene_id == '003' }}"
       - "{{ key_press_type == 'KeyPressed' }}"
       sequence: !input button_3_pressed
     - conditions:
-      - "{{ scene_id == 003 }}"
+      - "{{ scene_id == '003' }}"
       - "{{ key_press_type == 'KeyHeldDown' }}"
       sequence: !input button_3_held
     - conditions:
-      - "{{ scene_id == 004 }}"
+      - "{{ scene_id == '004' }}"
       - "{{ key_press_type == 'KeyPressed' }}"
       sequence: !input button_4_pressed
     - conditions:
-      - "{{ scene_id == 004 }}"
+      - "{{ scene_id == '004' }}"
       - "{{ key_press_type == 'KeyHeldDown' }}"
       sequence: !input button_4_held
     - conditions:
-      - "{{ scene_id == 005 }}"
+      - "{{ scene_id == '005' }}"
       - "{{ key_press_type == 'KeyPressed' }}"
       sequence: !input button_5_pressed
     - conditions:
-      - "{{ scene_id == 005 }}"
+      - "{{ scene_id == '005' }}"
       - "{{ key_press_type == 'KeyHeldDown' }}"
       sequence: !input button_5_held
     - conditions:
-      - "{{ scene_id == 006 }}"
+      - "{{ scene_id == '006' }}"
       - "{{ key_press_type == 'KeyPressed' }}"
       sequence: !input button_6_pressed
     - conditions:
-      - "{{ scene_id == 006 }}"
+      - "{{ scene_id == '006' }}"
       - "{{ key_press_type == 'KeyHeldDown' }}"
       sequence: !input button_6_held
     - conditions:
-      - "{{ scene_id == 007 }}"
+      - "{{ scene_id == '007' }}"
       - "{{ key_press_type == 'KeyPressed' }}"
       sequence: !input button_7_pressed
     - conditions:
-      - "{{ scene_id == 007 }}"
+      - "{{ scene_id == '007' }}"
       - "{{ key_press_type == 'KeyHeldDown' }}"
       sequence: !input button_7_held
     - conditions:
-      - "{{ scene_id == 008 }}"
+      - "{{ scene_id == '008' }}"
       - "{{ key_press_type == 'KeyPressed' }}"
       sequence: !input button_8_pressed
     - conditions:
-      - "{{ scene_id == 008 }}"
+      - "{{ scene_id == '008' }}"
       - "{{ key_press_type == 'KeyHeldDown' }}"
       sequence: !input button_8_held
     - conditions:
-      - "{{ scene_id == 009 }}"
+      - "{{ scene_id == '009' }}"
       - "{{ key_press_type == 'KeyPressed' }}"
       sequence: !input button_9_held
     - conditions:
-      - "{{ scene_id == 009 }}"
+      - "{{ scene_id == '009' }}"
       - "{{ key_press_type == 'KeyHeldDown' }}"
       sequence: !input button_9_held
     - conditions:
-      - "{{ scene_id == 010 }}"
+      - "{{ scene_id == '010' }}"
       - "{{ key_press_type == 'KeyPressed' }}"
       sequence: !input button_10_pressed
     - conditions:
-      - "{{ scene_id == 010 }}"
+      - "{{ scene_id == '010' }}"
       - "{{ key_press_type == 'KeyHeldDown' }}"
       sequence: !input button_10_held
     - conditions:
-      - "{{ scene_id == 011 }}"
+      - "{{ scene_id == '011' }}"
       - "{{ key_press_type == 'KeyPressed' }}"
       sequence: !input button_11_pressed
     - conditions:
-      - "{{ scene_id == 011 }}"
+      - "{{ scene_id == '011' }}"
       - "{{ key_press_type == 'KeyHeldDown' }}"
       sequence: !input button_11_held
     - conditions:
-      - "{{ scene_id == 012 }}"
+      - "{{ scene_id == '012' }}"
       - "{{ key_press_type == 'KeyPressed' }}"
       sequence: !input button_12_pressed
     - conditions:
-      - "{{ scene_id == 012 }}"
+      - "{{ scene_id == '012' }}"
       - "{{ key_press_type == 'KeyHeldDown' }}"
       sequence: !input button_12_held
-
-Changelog:
