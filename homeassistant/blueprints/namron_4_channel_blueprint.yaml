@@ -11,7 +11,7 @@ blueprint:
         device:
           integration: zwave_js
           manufacturer: Namron
-          model: 4512711
+          model: "4512711"
 
     button_1_pressed:
       name: Button 1 Pressed
